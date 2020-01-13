@@ -1,0 +1,16 @@
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\bin\Debug\MessageHubWithServiceBroker.exe.config
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\bin\Debug\MessageHubWithServiceBroker.exe
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\bin\Debug\MessageHubWithServiceBroker.pdb
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.fDashboard.resources
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.Properties.Resources.resources
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.csproj.GenerateResource.cache
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.csproj.CoreCompileInputs.cache
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.exe
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.pdb
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\bin\Debug\System.Data.SqlClient.dll
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\bin\Debug\System.Data.SqlClient.xml
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.csproj.CopyComplete
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.fTopics.resources
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.fPublishMessage.resources
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.fManageSubscription.resources
+C:\Users\ag4488\Documents\Visual Studio 2017\Projects\MessageHubWithServiceBroker\obj\Debug\MessageHubWithServiceBroker.csprojAssemblyReference.cache
