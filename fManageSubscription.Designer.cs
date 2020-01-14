@@ -57,6 +57,7 @@
             this.tbConsumerName.Name = "tbConsumerName";
             this.tbConsumerName.Size = new System.Drawing.Size(356, 22);
             this.tbConsumerName.TabIndex = 1;
+            this.tbConsumerName.Text = "[ConsumerX0]";
             // 
             // tbConsumerQueue
             // 
@@ -64,7 +65,7 @@
             this.tbConsumerQueue.Name = "tbConsumerQueue";
             this.tbConsumerQueue.Size = new System.Drawing.Size(356, 22);
             this.tbConsumerQueue.TabIndex = 3;
-            this.tbConsumerQueue.Text = "dbo.QueueConsumer[X]";
+            this.tbConsumerQueue.Text = "[dbo.QueueConsumerX0]";
             // 
             // label2
             // 
@@ -98,6 +99,7 @@
             this.tbWorker.Name = "tbWorker";
             this.tbWorker.Size = new System.Drawing.Size(566, 22);
             this.tbWorker.TabIndex = 7;
+            this.tbWorker.Text = "[dbo.ProcessMessageConsumerX0]";
             // 
             // label4
             // 

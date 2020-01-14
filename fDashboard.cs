@@ -24,7 +24,7 @@ namespace MessageHubWithServiceBroker
 
             PopulateConsumerList();
 
-            var consumerqueue = ((dynamic)cbConsumers.Items[cbConsumers.SelectedIndex]).code;
+            var consumerqueue = ((dynamic)cbConsumers.Items[cbConsumers.SelectedIndex]).code.Trim();
             PopulateTopicList(consumerqueue);
         }
 
@@ -72,7 +72,7 @@ namespace MessageHubWithServiceBroker
             }
         }
 
-        private void PopulateConsumerList()
+        public void PopulateConsumerList()
         {
             string queryString =
                 "SELECT [QueueConsumer],[Name],[WorkerName] FROM [LoanStarMessageBusBroker].[dbo].[BrokerConsumers]";
@@ -86,6 +86,8 @@ namespace MessageHubWithServiceBroker
                 
                 cbConsumers.DisplayMember = "name";
                 cbConsumers.ValueMember = "code";
+
+                cbConsumers.Items.Clear();
 
                 // Call Read before accessing data.
                 while (reader.Read())
@@ -198,15 +200,26 @@ namespace MessageHubWithServiceBroker
             //var consumerqueue = ((dynamic)cbConsumers.Items[cbConsumers.SelectedIndex]).code;
             //PopulateTopicList(consumerqueue);
 
+            string consumerqueue = ((dynamic)cbConsumers.Items[cbConsumers.SelectedIndex]).code.Trim();
+            string queryString =
+                "SELECT [WorkerName] FROM [dbo].[BrokerConsumers] " +
+                $"WHERE [QueueConsumer] = '{consumerqueue}'";
             using (SqlConnection connection =
                       new SqlConnection(Program.ConnectionString))
             {
                 connection.Open();
                 SqlCommand command =
-                    new SqlCommand("dbo.ConsumeMessage", connection);
+                    new SqlCommand(queryString, connection);
+                SqlDataReader reader = command.ExecuteReader();
+                reader.Read();
+                var worker = reader[0].ToString().Trim();
+                reader.Close();
+
+                command =
+                    new SqlCommand($"{worker}", connection);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.Add(new SqlParameter("@QueueConsumer", SqlDbType.NChar, 50, "QueueConsumer"));
-                command.Parameters[0].Value = ((dynamic)cbConsumers.Items[cbConsumers.SelectedIndex]).code;
+                command.Parameters.Add(new SqlParameter("@QueueConsumer", SqlDbType.NChar, 50));
+                command.Parameters[0].Value = consumerqueue;
                 command.ExecuteNonQuery();
             }
             tbError.Text = String.Empty;
@@ -248,6 +261,7 @@ namespace MessageHubWithServiceBroker
         {
             var queueConsumer = ((dynamic)cbConsumers.Items[cbConsumers.SelectedIndex]).code;
             var frm = new fManageSubscription(queueConsumer);
+            fManageSubscription.FDashboard = this;
             frm.Show();
 
             
@@ -257,6 +271,7 @@ namespace MessageHubWithServiceBroker
         private void bnCreateSubscription_Click(object sender, EventArgs e)
         {
             var frm = new fManageSubscription();
+            fManageSubscription.FDashboard = this;
             frm.Show();
         }
     }

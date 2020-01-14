@@ -58,7 +58,7 @@ namespace MessageHubWithServiceBroker
                 SqlCommand command =
                     new SqlCommand("dbo.PublishMessage", connection);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.Add(new SqlParameter("@ContractName", SqlDbType.NChar, 50, "Contract"));
+                command.Parameters.Add(new SqlParameter("@ContractName", SqlDbType.NChar, 50));
                 command.Parameters[0].Value = ((dynamic)cbTopics.Items[cbTopics.SelectedIndex]).code;
                 var res = command.ExecuteNonQuery();
             }

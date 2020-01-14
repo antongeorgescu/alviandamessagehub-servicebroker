@@ -14,6 +14,7 @@ namespace MessageHubWithServiceBroker
     public partial class fManageSubscription : Form
     {
         //public string QueueConsumer { get; set; }
+        public static fDashboard FDashboard;
 
         public fManageSubscription(string queueConsumer = null)
         {
@@ -171,6 +172,7 @@ namespace MessageHubWithServiceBroker
                 }
             }
 
+            FDashboard.PopulateConsumerList();
 
             tbError.Clear();
             tbError.AppendText("Execution finished successfully.");
