@@ -1,0 +1,29 @@
+Follow the next set of steps to install and configure AlviandaMessageBroker database
+
+1. Get access to a database server preferably into an Admin role
+
+2. Connect to database, master db
+
+3. Open and run the script Database_Create_and_Setup.sql
+
+4. Open and run the script Tables_Create_and_Populate.sql
+
+5. Open and run the script StoredProc_ClearInitialConfigurationQueues.sql
+
+6. Open and run the script StoredProc_ConsumeMessage.sql
+
+7. Open and run the script StoredProc_ConsumeTopicsSummaryReport.sql
+
+8. Open and run the script StoredProc_PublishMessage.sql
+
+9. Open and run the script DStoredProc_SaveConsumer.sql
+
+10. Open and run the script StoredProc_UpdateConsumerContracts.sql
+
+11. Open and run the script ServiceBroker_CreateMessageTypes.sql
+
+12. Open and run the script ServiceBroker_CreateContracts.sql
+
+13. Open and run the script ServiceBroker_CreateQueues.sql
+
+14. Open and run the script ServiceBroker_CreateServices.sql
