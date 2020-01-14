@@ -127,6 +127,7 @@
     <Content Include="Database Scripts\DropAllObjects.sql" />
     <Content Include="Database Scripts\DropAndCreateDatabase.sql" />
     <Content Include="Database Scripts\DropServiceBrokerObjectsPOC.sql" />
+    <Content Include="Database Scripts\ProcessMessageConsumerX0.sql" />
     <Content Include="Database Scripts\PublishMessage.sql" />
     <Content Include="Database Scripts\SaveConsumer.sql" />
     <Content Include="Database Scripts\ShowSelectedTopicsPerConsumer.sql" />
