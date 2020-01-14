@@ -25,7 +25,8 @@
 *.lib
 *.sbr
 *.sdf
-ipch/ 
+ipch/
+.vs/
 *.dbmdl
 *.csproj.user
 *.cache
@@ -45,3 +46,4 @@ Ankh.NoLoad
 
 #Other
 .svn
+*BAK/ 

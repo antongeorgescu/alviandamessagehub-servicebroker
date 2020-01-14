@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace MessageHubWithServiceBroker
 {
@@ -20,7 +21,8 @@ namespace MessageHubWithServiceBroker
 
         private void fDashboard_Load(object sender, EventArgs e)
         {
-            Program.ConnectionString = "Data Source=STDL1ZJM1N2\\MSSQLSERVER2;Initial Catalog=LoanStarMessageBusBroker;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            var appSettings = ConfigurationManager.AppSettings;
+            Program.ConnectionString = ConfigurationManager.ConnectionStrings["AlviandaMessageBroker"].ConnectionString;
 
             PopulateConsumerList();
 
