@@ -1,4 +1,4 @@
-# Alvianda Message Hub
+# Alvianda Message Hub with SQL Service Broker
 Example of a multi-topic/multi-consumer message hub implementation using Sql Server ServiceBroker 
 
 A few advantages of this solution:
