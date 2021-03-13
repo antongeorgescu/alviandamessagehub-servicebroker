@@ -2,7 +2,7 @@ USE [AlviandaMessageBroker]
 GO
 
 /****** Object:  StoredProcedure [dbo].[ClearServiceBrokerQueries]    Script Date: 1/14/2020 11:20:57 AM ******/
-DROP PROCEDURE [dbo].[ClearServiceBrokerQueries]
+DROP PROCEDURE IF EXISTS [dbo].[ClearServiceBrokerQueries]
 GO
 
 /****** Object:  StoredProcedure [dbo].[ClearServiceBrokerQueries]    Script Date: 1/14/2020 11:20:57 AM ******/
