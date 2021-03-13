@@ -1,3 +1,5 @@
+USE [AlviandaMessageBroker]
+
 CREATE MESSAGE TYPE
 [mhb.cbs.DateTimeRequestMessage]
 VALIDATION = WELL_FORMED_XML
