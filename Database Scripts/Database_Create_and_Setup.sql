@@ -9,9 +9,9 @@ GO
 CREATE DATABASE [AlviandaMessageBusBroker]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'AlviandaMessageBroker', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.ALVIANDA\MSSQL\DATA\AlviandaMessageBroker.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+( NAME = N'AlviandaMessageBroker', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\AlviandaMessageBroker.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
-( NAME = N'AlviandaMessageBroker_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.ALVIANDA\MSSQL\DATA\AlviandaMessageBroker_log.ldf' , SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+( NAME = N'AlviandaMessageBroker_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\AlviandaMessageBroker_log.ldf' , SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
 GO
 
 ALTER DATABASE [AlviandaMessageBroker] SET COMPATIBILITY_LEVEL = 140
