@@ -1,3 +1,5 @@
+USE [AlviandaMessageBroker]
+
 CREATE SERVICE DateTimeInitiatorService
 ON QUEUE DateTimeInitiatorQueue 
 (
