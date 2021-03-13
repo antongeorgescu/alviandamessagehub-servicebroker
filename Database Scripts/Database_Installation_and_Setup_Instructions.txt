@@ -16,7 +16,7 @@ Follow the next set of steps to install and configure AlviandaMessageBroker data
 
 8. Open and run the script StoredProc_PublishMessage.sql
 
-9. Open and run the script DStoredProc_SaveConsumer.sql
+9. Open and run the script StoredProc_SaveConsumer.sql
 
 10. Open and run the script StoredProc_UpdateConsumerContracts.sql
 
