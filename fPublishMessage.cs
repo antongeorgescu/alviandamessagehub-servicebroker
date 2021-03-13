@@ -22,7 +22,7 @@ namespace MessageHubWithServiceBroker
         {
             string queryString =
                 "SELECT [Contract],[InitiatorMessageType],[TargetMessageType],[Topic] " +
-                "FROM[LoanStarMessageBusBroker].[dbo].[BrokerContractMessageTypes]";
+                "FROM [AlviandaMessageBroker].[dbo].[BrokerContractMessageTypes]";
 
             using (SqlConnection connection =
                        new SqlConnection(Program.ConnectionString))
