@@ -1,3 +1,5 @@
+USE [AlviandaMessageBroker]
+
 CREATE QUEUE DateTimeInitiatorQueue
 WITH STATUS = ON
 GO
