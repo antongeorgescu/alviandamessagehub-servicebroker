@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,15 +32,15 @@ namespace MessageHubWithServiceBroker
 
         private void PopulateTopicList(string consumer)
         {
-            string queryString = 
-                "SELECT [QueueConsumer],[Name],[WorkerName],[Description] FROM [LoanStarMessageBusBroker].[dbo].[BrokerConsumers] " +
+            string queryString =
+                "SELECT [QueueConsumer],[Name],[WorkerName],[Description] FROM [AlviandaMessageBroker].[dbo].[BrokerConsumers] " +
                 $"WHERE [QueueConsumer] = '{consumer}'";
 
             string queryString2 =
                 "SELECT sm.[Contract],sm.[QueueConsumer],sm.[ServiceConsumer]," +
                 "mt.[InitiatorMessageType],mt.[TargetMessageType],mt.[Topic] " +
-                "FROM[LoanStarMessageBusBroker].[dbo].[BrokerServicesMatrix] sm " +
-                "INNER JOIN[LoanStarMessageBusBroker].[dbo].[BrokerContractMessageTypes] mt " +
+                "FROM [AlviandaMessageBroker].[dbo].[BrokerServicesMatrix] sm " +
+                "INNER JOIN [AlviandaMessageBroker].[dbo].[BrokerContractMessageTypes] mt " +
                 "ON sm.[Contract] = mt.[Contract] " +
                 $"WHERE sm.[QueueConsumer] = '{consumer}'";
 
@@ -77,7 +77,7 @@ namespace MessageHubWithServiceBroker
         public void PopulateConsumerList()
         {
             string queryString =
-                "SELECT [QueueConsumer],[Name],[WorkerName] FROM [LoanStarMessageBusBroker].[dbo].[BrokerConsumers]";
+                "SELECT [QueueConsumer],[Name],[WorkerName] FROM [AlviandaMessageBroker].[dbo].[BrokerConsumers]";
             using (SqlConnection connection =
                        new SqlConnection(Program.ConnectionString))
             {
@@ -112,7 +112,7 @@ namespace MessageHubWithServiceBroker
 
             var consumerqueue = ((dynamic)cbConsumers.SelectedItem).code;
             string queryString =
-                "SELECT [QueueConsumer],[Description],[WorkerName] FROM [LoanStarMessageBusBroker].[dbo].[BrokerConsumers] " +
+                "SELECT [QueueConsumer],[Description],[WorkerName] FROM [AlviandaMessageBroker].[dbo].[BrokerConsumers] " +
                 $"WHERE [QueueConsumer] = '{consumerqueue}'";
             using (SqlConnection connection =
                        new SqlConnection(Program.ConnectionString))
