@@ -2,7 +2,7 @@ USE [master]
 GO
 
 /****** Object:  Database [AlviandaMessageBroker]    Script Date: 1/13/2020 2:23:59 PM ******/
-DROP DATABASE [AlviandaMessageBroker]
+DROP DATABASE IF EXISTS [AlviandaMessageBroker]
 GO
 
 /****** Object:  Database [AlviandaMessageBroker]    Script Date: 1/13/2020 2:23:59 PM ******/
