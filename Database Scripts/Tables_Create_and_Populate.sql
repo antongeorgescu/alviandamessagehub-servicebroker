@@ -42,7 +42,7 @@ INSERT INTO [dbo].[BrokerConsumers]
 
 
 /****** Object:  Table [dbo].[BrokerContractMessageTypes]    Script Date: 1/14/2020 11:25:52 AM ******/
-DROP TABLE [dbo].[BrokerContractMessageTypes]
+DROP TABLE IF EXISTS [dbo].[BrokerContractMessageTypes]
 GO
 
 /****** Object:  Table [dbo].[BrokerContractMessageTypes]    Script Date: 1/14/2020 11:25:52 AM ******/
@@ -77,7 +77,7 @@ INSERT INTO [dbo].[BrokerContractMessageTypes]
 	VALUES ('mhb.cbs.ContractInType4','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType5','<DateTimeRequest>What time is it?</DateTimeRequest>')
 
 /****** Object:  Table [dbo].[BrokerServicesMatrix]    Script Date: 1/14/2020 11:27:00 AM ******/
-DROP TABLE [dbo].[BrokerServicesMatrix]
+DROP TABLE IF EXISTS [dbo].[BrokerServicesMatrix]
 GO
 
 /****** Object:  Table [dbo].[BrokerServicesMatrix]    Script Date: 1/14/2020 11:27:00 AM ******/
@@ -111,7 +111,7 @@ INSERT INTO [dbo].[BrokerServicesMatrix] ([Contract],[QueueConsumer],[ServiceCon
 INSERT INTO [dbo].[BrokerServicesMatrix] ([Contract],[QueueConsumer],[ServiceConsumer]) VALUES ('mhb.cbs.ContractInType4','dbo.QueueConsumerE','ServiceConsumerE4')
 
 /****** Object:  Table [dbo].[ConsumerData]    Script Date: 1/14/2020 11:27:25 AM ******/
-DROP TABLE [dbo].[ConsumerData]
+DROP TABLE IF EXISTS [dbo].[ConsumerData]
 GO
 
 /****** Object:  Table [dbo].[ConsumerData]    Script Date: 1/14/2020 11:27:25 AM ******/
