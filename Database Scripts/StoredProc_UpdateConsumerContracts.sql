@@ -2,7 +2,7 @@ USE [AlviandaMessageBroker]
 GO
 
 /****** Object:  StoredProcedure [dbo].[UpdateConsumerContracts]    Script Date: 1/14/2020 11:15:36 AM ******/
-DROP PROCEDURE [dbo].[UpdateConsumerContracts]
+DROP PROCEDURE IF EXISTS [dbo].[UpdateConsumerContracts]
 GO
 
 /****** Object:  StoredProcedure [dbo].[UpdateConsumerContracts]    Script Date: 1/14/2020 11:15:36 AM ******/
