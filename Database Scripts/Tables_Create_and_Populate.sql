@@ -2,7 +2,7 @@ USE [AlviandaMessageBroker]
 GO
 
 /****** Object:  Table [dbo].[BrokerConsumers]    Script Date: 1/14/2020 11:24:48 AM ******/
-DROP TABLE [dbo].[BrokerConsumers]
+DROP TABLE IF EXISTS [dbo].[BrokerConsumers]
 GO
 
 /****** Object:  Table [dbo].[BrokerConsumers]    Script Date: 1/14/2020 11:24:48 AM ******/
