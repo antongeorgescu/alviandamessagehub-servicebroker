@@ -6,7 +6,7 @@ DROP DATABASE IF EXISTS [AlviandaMessageBroker]
 GO
 
 /****** Object:  Database [AlviandaMessageBroker]    Script Date: 1/13/2020 2:23:59 PM ******/
-CREATE DATABASE [AlviandaMessageBusBroker]
+CREATE DATABASE [AlviandaMessageBroker]
  CONTAINMENT = NONE
  ON  PRIMARY 
 ( NAME = N'AlviandaMessageBroker', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\AlviandaMessageBroker.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
