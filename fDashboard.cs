@@ -136,10 +136,10 @@ namespace MessageHubWithServiceBroker
 
         private void PopulateConsumerLog(string consumerqueue)
         {
-            string queryString = "select message_type_name as \"MessageType\"," +
-                                "qp.message_enqueue_time as \"Posted On\"," +
-                                "mt.Topic as \"Topic\"," +
-                                "CAST(qp.message_body AS XML) AS \"ResponseMessage\" " +
+            string queryString = "select message_type_name as [MessageType]," +
+                                "qp.message_enqueue_time as [Posted On]," +
+                                "mt.Topic as [Topic]," +
+                                "CAST(qp.message_body AS XML) AS [ResponseMessage] " +
                                 "from dbo.QueuePublisher qp " +
                                 "inner join dbo.BrokerContractMessageTypes mt on qp.message_type_name = mt.TargetMessageType COLLATE SQL_Latin1_General_CP1_CI_AS " +
                                 "where qp.validation = 'X' " +
@@ -214,7 +214,7 @@ namespace MessageHubWithServiceBroker
                     new SqlCommand(queryString, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 reader.Read();
-                var worker = reader[0].ToString().Trim();
+                var worker = reader[0].ToString().Replace("[Stored Proc] ", "").Trim();
                 reader.Close();
 
                 command =
@@ -232,7 +232,7 @@ namespace MessageHubWithServiceBroker
         {
             var consumerqueue = ((dynamic)cbConsumers.SelectedItem).code;
             string queryString =
-                "SELECT [QueueConsumer],[Description],[WorkerName] FROM [LoanStarMessageBusBroker].[dbo].[BrokerConsumers] " +
+                "SELECT [QueueConsumer],[Description],[WorkerName] FROM [AlviandaMessageBroker].[dbo].[BrokerConsumers] " +
                 $"WHERE [QueueConsumer] = '{consumerqueue}'";
             using (SqlConnection connection =
                        new SqlConnection(Program.ConnectionString))
