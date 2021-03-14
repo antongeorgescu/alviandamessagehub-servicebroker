@@ -1,16 +1,17 @@
 USE [AlviandaMessageBroker]
 GO
 
-/****** Object:  StoredProcedure [dbo].[ConsumeMessage]    Script Date: 1/14/2020 11:07:40 AM ******/
-DROP PROCEDURE IF EXISTS [dbo].[ConsumeMessage]
+/****** Object:  StoredProcedure [dbo].[ConsumeMessage]    Script Date: 3/13/2021 11:46:40 PM ******/
+DROP PROCEDURE [dbo].[ConsumeMessage]
 GO
 
-/****** Object:  StoredProcedure [dbo].[ConsumeMessage]    Script Date: 1/14/2020 11:07:40 AM ******/
+/****** Object:  StoredProcedure [dbo].[ConsumeMessage]    Script Date: 3/13/2021 11:46:40 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 -- =========================================================================================
 -- Author:		Anton Georgescu
@@ -38,8 +39,7 @@ BEGIN
 
 	DECLARE @SQLString nvarchar(500);  
 	DECLARE @ParmDefinition nvarchar(500); 
-	
-    
+	 
 	DECLARE msgtypes_cursor CURSOR FOR   
 
 	-- Get all message types for this contract and put them in a cursor
@@ -54,6 +54,8 @@ BEGIN
 	FETCH NEXT FROM msgtypes_cursor   
 	INTO @messagetype
   
+	PRINT @messagetype
+
 	WHILE @@FETCH_STATUS = 0  
 	BEGIN  
 		
@@ -137,6 +139,7 @@ BEGIN
 							SET @responsemessage = '<DateTimeResponse>Response from ' + @QueueConsumer + ': Current time is '
 								+ CAST(SYSDATETIME() AS nvarchar(256)) + ' offset by ' +  CAST(@timeoffset AS nvarchar(100))
 								+ ' hours</DateTimeResponse>' ;
+							PRINT CONVERT(nvarchar(MAX),@responsemessage);
 							-- Send the response message back to the initiating service
 							SEND ON CONVERSATION @ch MESSAGE TYPE @messagetype (@responsemessage) ;
 							-- End the conversation on the target's side
@@ -156,6 +159,7 @@ BEGIN
 							SET @responsemessage = '<LanguageResponse>Response from ' + @QueueConsumer + ': Language is '
 								+ @language
 								+ '</LanguageResponse>' ;
+							PRINT CONVERT(nvarchar(MAX),@responsemessage);
 							-- Send the response message back to the initiating service
 							SEND ON CONVERSATION @ch MESSAGE TYPE @messagetype (@responsemessage) ;
 							-- End the conversation on the target's side
@@ -175,6 +179,7 @@ BEGIN
 							SET @responsemessage = '<CountryResponse>Response from ' + @QueueConsumer + ': Country is '
 								+ @country
 								+ '</CountryResponse>' ;
+							PRINT CONVERT(nvarchar(MAX),@responsemessage);
 							--Send the response message back to the initiating service
 							SEND ON CONVERSATION @ch MESSAGE TYPE @messagetype (@responsemessage) ;
 							-- End the conversation on the target's side
@@ -194,6 +199,7 @@ BEGIN
 							SET @responsemessage = '<CapitalCityResponse>Response from ' + @QueueConsumer + ': Capital city is '
 								+ @capital
 								+ '</CapitalCityResponse>' ;
+							PRINT CONVERT(nvarchar(MAX),@responsemessage);
 							-- Send the response message back to the initiating service
 							SEND ON CONVERSATION @ch MESSAGE TYPE @messagetype (@responsemessage) ;
 							-- End the conversation on the target's side
@@ -213,6 +219,7 @@ BEGIN
 							SET @responsemessage = '<FavouriteSportRequest>Response from ' + @QueueConsumer + ': Favourite sport is '
 								+ @sport
 								+ '</FavouriteSportRequest>' ;
+							PRINT CONVERT(nvarchar(MAX),@responsemessage);
 							-- Send the response message back to the initiating service
 							SEND ON CONVERSATION @ch MESSAGE TYPE @messagetype (@responsemessage) ;
 							-- End the conversation on the target's side
@@ -233,7 +240,7 @@ BEGIN
 	END   
 	CLOSE msgtypes_cursor;  
 	DEALLOCATE msgtypes_cursor;  
-
+	
 END
 GO
 
