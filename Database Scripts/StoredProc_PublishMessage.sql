@@ -1,16 +1,17 @@
 USE [AlviandaMessageBroker]
 GO
 
-/****** Object:  StoredProcedure [dbo].[PublishMessage]    Script Date: 1/14/2020 10:59:03 AM ******/
-DROP PROCEDURE IF EXISTS [dbo].[PublishMessage]
+/****** Object:  StoredProcedure [dbo].[PublishMessage]    Script Date: 3/13/2021 11:49:08 PM ******/
+DROP PROCEDURE [dbo].[PublishMessage]
 GO
 
-/****** Object:  StoredProcedure [dbo].[PublishMessage]    Script Date: 1/14/2020 10:59:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[PublishMessage]    Script Date: 3/13/2021 11:49:08 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 -- ======================================================
 -- Author:		Anton Georgescu
@@ -46,7 +47,7 @@ BEGIN
 	BEGIN  
 		BEGIN TRANSACTION ;
 		SET @contract = @ContractName
-		PRINT @service
+		PRINT 'Service:'+@service+', Contract:'+@contract
 		
 		BEGIN DIALOG CONVERSATION @ch
 			  FROM SERVICE [ServicePublisher]
@@ -72,5 +73,6 @@ BEGIN
 
 END
 GO
+
 
 
