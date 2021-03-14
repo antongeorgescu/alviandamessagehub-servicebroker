@@ -1,4 +1,4 @@
-﻿namespace MessageHubWithServiceBroker
+namespace MessageHubWithServiceBroker
 {
     partial class fDashboard
     {
@@ -31,6 +31,8 @@
             this.cbConsumers = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbConsumerDescription = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tbWorker = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lbConsumerLog = new System.Windows.Forms.ListBox();
@@ -47,8 +49,6 @@
             this.bnConsume = new System.Windows.Forms.Button();
             this.tbError = new System.Windows.Forms.TextBox();
             this.bnCreateSubscription = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbConsumerDescription = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             this.cbConsumers.FormattingEnabled = true;
             this.cbConsumers.Location = new System.Drawing.Point(134, 32);
             this.cbConsumers.Name = "cbConsumers";
-            this.cbConsumers.Size = new System.Drawing.Size(407, 24);
+            this.cbConsumers.Size = new System.Drawing.Size(359, 24);
             this.cbConsumers.TabIndex = 0;
             this.cbConsumers.SelectedIndexChanged += new System.EventHandler(this.cbConsumers_SelectedIndexChanged);
             // 
@@ -88,6 +88,25 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consumer Info";
+            // 
+            // tbConsumerDescription
+            // 
+            this.tbConsumerDescription.BackColor = System.Drawing.SystemColors.Window;
+            this.tbConsumerDescription.Location = new System.Drawing.Point(99, 56);
+            this.tbConsumerDescription.Multiline = true;
+            this.tbConsumerDescription.Name = "tbConsumerDescription";
+            this.tbConsumerDescription.ReadOnly = true;
+            this.tbConsumerDescription.Size = new System.Drawing.Size(722, 47);
+            this.tbConsumerDescription.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 17);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Name:";
             // 
             // tbWorker
             // 
@@ -177,12 +196,13 @@
             // 
             // bnPublish
             // 
+            this.bnPublish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.bnPublish.Location = new System.Drawing.Point(221, 522);
             this.bnPublish.Name = "bnPublish";
-            this.bnPublish.Size = new System.Drawing.Size(176, 32);
+            this.bnPublish.Size = new System.Drawing.Size(222, 32);
             this.bnPublish.TabIndex = 4;
-            this.bnPublish.Text = "Post Publisher Message";
-            this.bnPublish.UseVisualStyleBackColor = true;
+            this.bnPublish.Text = "#1 Post Publisher Message";
+            this.bnPublish.UseVisualStyleBackColor = false;
             this.bnPublish.Click += new System.EventHandler(this.bnPublish_Click);
             // 
             // bnSubscribeConsumer
@@ -197,12 +217,13 @@
             // 
             // bnRefresh
             // 
-            this.bnRefresh.Location = new System.Drawing.Point(717, 27);
+            this.bnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bnRefresh.Location = new System.Drawing.Point(686, 27);
             this.bnRefresh.Name = "bnRefresh";
-            this.bnRefresh.Size = new System.Drawing.Size(160, 32);
+            this.bnRefresh.Size = new System.Drawing.Size(191, 32);
             this.bnRefresh.TabIndex = 6;
-            this.bnRefresh.Text = "Refresh";
-            this.bnRefresh.UseVisualStyleBackColor = true;
+            this.bnRefresh.Text = "#3 Consumer Reply";
+            this.bnRefresh.UseVisualStyleBackColor = false;
             this.bnRefresh.Click += new System.EventHandler(this.bnRefresh_Click);
             // 
             // bnTopics
@@ -217,12 +238,13 @@
             // 
             // bnConsume
             // 
-            this.bnConsume.Location = new System.Drawing.Point(547, 27);
+            this.bnConsume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bnConsume.Location = new System.Drawing.Point(499, 27);
             this.bnConsume.Name = "bnConsume";
-            this.bnConsume.Size = new System.Drawing.Size(160, 32);
+            this.bnConsume.Size = new System.Drawing.Size(172, 32);
             this.bnConsume.TabIndex = 8;
-            this.bnConsume.Text = "Process Messages";
-            this.bnConsume.UseVisualStyleBackColor = true;
+            this.bnConsume.Text = "#2 Process Messages";
+            this.bnConsume.UseVisualStyleBackColor = false;
             this.bnConsume.Click += new System.EventHandler(this.bnConsume_Click);
             // 
             // tbError
@@ -243,25 +265,6 @@
             this.bnCreateSubscription.Text = "Create Consumer";
             this.bnCreateSubscription.UseVisualStyleBackColor = true;
             this.bnCreateSubscription.Click += new System.EventHandler(this.bnCreateSubscription_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 17);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Name:";
-            // 
-            // tbConsumerDescription
-            // 
-            this.tbConsumerDescription.BackColor = System.Drawing.SystemColors.Window;
-            this.tbConsumerDescription.Location = new System.Drawing.Point(99, 56);
-            this.tbConsumerDescription.Multiline = true;
-            this.tbConsumerDescription.Name = "tbConsumerDescription";
-            this.tbConsumerDescription.ReadOnly = true;
-            this.tbConsumerDescription.Size = new System.Drawing.Size(722, 47);
-            this.tbConsumerDescription.TabIndex = 9;
             // 
             // fDashboard
             // 
@@ -314,4 +317,3 @@
         private System.Windows.Forms.Label label6;
     }
 }
-
