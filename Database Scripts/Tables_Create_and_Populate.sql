@@ -62,19 +62,19 @@ GO
 
 INSERT INTO [dbo].[BrokerContractMessageTypes]
 	([Contract],[InitiatorMessageType],[TargetMessageType],[Topic])
-	VALUES ('mhb.cbs.ContractInType0','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType1','<LanguageRequest>What is your language?</LanguageRequest>')
+	VALUES ('mhb.cbs.ContractInType1','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType2','<LanguageRequest>What is your language?</LanguageRequest>')
 INSERT INTO [dbo].[BrokerContractMessageTypes]
 	([Contract],[InitiatorMessageType],[TargetMessageType],[Topic])
-	VALUES ('mhb.cbs.ContractInType1','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType2','<CountryRequest>What is your country?</CountryRequest>')
+	VALUES ('mhb.cbs.ContractInType2','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType3','<CountryRequest>What is your country?</CountryRequest>')
 INSERT INTO [dbo].[BrokerContractMessageTypes]
 	([Contract],[InitiatorMessageType],[TargetMessageType],[Topic])
-	VALUES ('mhb.cbs.ContractInType2','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType3','<CapitalCityRequest>What is your capital?</CapitalCityRequest>')
+	VALUES ('mhb.cbs.ContractInType3','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType4','<CapitalCityRequest>What is your capital?</CapitalCityRequest>')
 INSERT INTO [dbo].[BrokerContractMessageTypes]
 	([Contract],[InitiatorMessageType],[TargetMessageType],[Topic])
-	VALUES ('mhb.cbs.ContractInType3','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType4','<FavouriteSportRequest>What is favourite sport?</FavouriteSportRequest>')
+	VALUES ('mhb.cbs.ContractInType4','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType5','<FavouriteSportRequest>What is favourite sport?</FavouriteSportRequest>')
 INSERT INTO [dbo].[BrokerContractMessageTypes]
 	([Contract],[InitiatorMessageType],[TargetMessageType],[Topic])
-	VALUES ('mhb.cbs.ContractInType4','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType5','<DateTimeRequest>What time is it?</DateTimeRequest>')
+	VALUES ('mhb.cbs.ContractInType0','mhb.cbs.InRequestMessage','mhb.cbs.ResponseMessageType1','<DateTimeRequest>What time is it?</DateTimeRequest>')
 
 /****** Object:  Table [dbo].[BrokerServicesMatrix]    Script Date: 1/14/2020 11:27:00 AM ******/
 DROP TABLE IF EXISTS [dbo].[BrokerServicesMatrix]
