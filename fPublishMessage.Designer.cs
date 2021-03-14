@@ -41,6 +41,7 @@
             this.cbTopics.Name = "cbTopics";
             this.cbTopics.Size = new System.Drawing.Size(589, 24);
             this.cbTopics.TabIndex = 0;
+            this.cbTopics.SelectedValueChanged += new System.EventHandler(this.OnPublishedMessageChanged);
             // 
             // label1
             // 
