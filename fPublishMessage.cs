@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +51,7 @@ namespace MessageHubWithServiceBroker
 
         private void bnPublish_Click(object sender, EventArgs e)
         {
+            
             using (SqlConnection connection =
                       new SqlConnection(Program.ConnectionString))
             {
@@ -62,9 +63,13 @@ namespace MessageHubWithServiceBroker
                 command.Parameters[0].Value = ((dynamic)cbTopics.Items[cbTopics.SelectedIndex]).code;
                 var res = command.ExecuteNonQuery();
             }
-            tbStatus.Text = String.Empty;
+            
+            tbStatus.Text = "Message published! Make new selection and publish.";
+        }
 
-            tbStatus.Text = "Message published!";
+        private void OnPublishedMessageChanged(object sender, EventArgs e)
+        {
+            tbStatus.Text = string.Empty;
         }
     }
 }
